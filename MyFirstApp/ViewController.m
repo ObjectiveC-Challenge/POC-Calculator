@@ -13,7 +13,7 @@
 
 @implementation ViewController
 
-@synthesize basicCalculator, lblDisplay, strDisplay, operation;
+@synthesize basicCalculator, displayLabel, strDisplay, operation;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,5 +21,14 @@
     self.strDisplay = [[NSString alloc] init];
 }
 
+- (IBAction)numberWasTapped: (id)sender {
+
+    if ([self.displayLabel.text  isEqual: @"0"]) {
+        NSLog(@"aqui estou");
+        displayLabel.text = @"";
+    }
+    self.displayLabel.text = [self.displayLabel.text stringByAppendingFormat:@"%ld",(long)[sender tag]];
+
+}
 
 @end

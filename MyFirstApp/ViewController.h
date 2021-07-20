@@ -10,33 +10,23 @@
 
 @interface ViewController : UIViewController {
     Calculator *basicCalculator;
-    IBOutlet UILabel *lblDisplay;
+    IBOutlet UILabel *displayLabel;
     double operator01, result;
     NSString *strDisplay, *operation;
     BOOL enablePoint, afterEqual, showNumberValid,enableCount;
 }
 @property (nonatomic, strong) Calculator *basicCalculator;
-@property (nonatomic, strong) UILabel *lblDisplay;
+@property (nonatomic, strong) UILabel *displayLabel;
 @property (nonatomic, strong) NSString *strDisplay, *operation;
 
 - (IBAction)showClear;
 - (IBAction)showDivide;
-- (IBAction)show9;
-- (IBAction)show8;
-- (IBAction)show7;
 - (IBAction)showMultiply;
-- (IBAction)show6;
-- (IBAction)show5;
-- (IBAction)show4;
 - (IBAction)showSubtract;
-- (IBAction)show3;
-- (IBAction)show2;
-- (IBAction)show1;
 - (IBAction)showAdd;
-- (IBAction)show0;
 - (IBAction)showEqual;
 - (void)showNumber:(NSString *)number;
-- (IBAction)show:(id)sender;
+- (IBAction)numberWasTapped:(id)sender;
 
 @end
 
