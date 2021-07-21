@@ -25,7 +25,6 @@
 - (IBAction)showSubtract;
 - (IBAction)showAdd;
 - (IBAction)showEqual;
-- (void)showNumber:(NSString *)number;
 - (IBAction)numberWasTapped:(id)sender;
 
 @end
